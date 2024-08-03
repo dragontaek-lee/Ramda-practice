@@ -1,4 +1,4 @@
-import { filterList } from './filterList'; // 실제 파일 경로를 사용
+import { filterList } from './filterList'; 
 
 describe('filterList function', () => {
     test('should filter out invalid names and status', () => {
