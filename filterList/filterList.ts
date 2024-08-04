@@ -35,3 +35,11 @@ export const filterList = (data: User[], targetStatus: number): ProcessedUser[] 
 
 	return filteredTwo;
 };
+
+export const filterListWithJavaScript = (data: User[], targetStatus: number): ProcessedUser[] => {
+	const mapData = data.map((v) => filterInvalidName(v));
+	const filteredOne = mapData.filter((v): v is ProcessedUser => v !== null);
+	const filteredTwo = filteredOne.filter((v) => v.status === targetStatus);
+
+	return filteredTwo;
+}
